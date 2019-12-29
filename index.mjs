@@ -5,11 +5,14 @@
  */
 
 import { myevolux }     from '/evolux.universe';
+import Repository       from "./lib/repository.mjs";
+
+export *                from './lib/types/types.mjs';
 
 export const service = {
     install() {
         console.log('** schema install()');
-        // myevolux(). = new ();
+        myevolux().schema = new Repository();
     },
 
     uninstall() {
@@ -24,12 +27,12 @@ export const service = {
 
     start() {
         console.log('** schema start()');
-        // myevolux().matter;
+        myevolux().schema.init();
     },
 
     stop() {
         console.log('** schema stop()');
-        // myevolux().matter;
+        myevolux().schema.exit();
     },
 
     update() {
