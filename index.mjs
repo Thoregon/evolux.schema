@@ -6,8 +6,10 @@
 
 import { myuniverse, myevolux } from '/evolux.universe';
 import Repository               from "./lib/repository.mjs";
+import SchemaBuilder            from "./lib/schemabuilder.mjs";
 
 export *                        from './lib/types/types.mjs';
+export default SchemaBuilder;
 
 export const service = {
     install() {
