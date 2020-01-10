@@ -4,7 +4,7 @@
  * @author: Bernhard Lukassen
  */
 
-import { myuniverse, myevolux } from '/evolux.universe';
+import { myuniverse, tservices } from '/evolux.universe';
 import Repository               from "./lib/repository.mjs";
 import SchemaBuilder            from "./lib/schemabuilder.mjs";
 
@@ -14,12 +14,12 @@ export default SchemaBuilder;
 export const service = {
     install() {
         myuniverse().logger.debug('** schema install()');
-        myevolux().schema = new Repository();
+        tservices().schema = new Repository();
     },
 
     uninstall() {
         myuniverse().logger.debug('** schema uninstall()');
-        // delete myevolux().;
+        // delete tservices().;
     },
 
     resolve() {
@@ -29,12 +29,12 @@ export const service = {
 
     start() {
         myuniverse().logger.debug('** schema start()');
-        myevolux().schema.init();
+        tservices().schema.init();
     },
 
     stop() {
         myuniverse().logger.debug('** schema stop()');
-        myevolux().schema.exit();
+        tservices().schema.exit();
     },
 
     update() {
