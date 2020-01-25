@@ -1,0 +1,28 @@
+{
+  "name": "evolux.schema",
+  "version": "1.0.0",
+  "description": "All kinds of API, schema and behavior descriptions",
+  "main": "index.mjs",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thoregon/evolux.schema.git"
+  },
+  "keywords": [],
+  "author": "Bernhard Lukassen <bl@bernhard-lukassen.com> (http://www.bernhard-lukassen.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thoregon/evolux.schema/issues"
+  },
+  "homepage": "https://github.com/Thoregon/evolux.schema#readme",
+  "dependencies": {
+    "@sindresorhus/is": "^1.2.0",
+    "has-values": "^2.0.1"
+  }
+}
