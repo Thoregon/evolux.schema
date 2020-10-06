@@ -4,7 +4,7 @@
  * @author: Bernhard Lukassen
  */
 
-import { myuniverse, tservices } from '/evolux.universe';
+import { tservices }            from '/evolux.universe';
 import Repository               from "./lib/repository.mjs";
 import SchemaBuilder            from "./lib/schemabuilder.mjs";
 
@@ -13,31 +13,31 @@ export default SchemaBuilder;
 
 export const service = {
     install() {
-        myuniverse().logger.debug('** schema install()');
+        universe.logger.debug('** schema install()');
         tservices().schema = new Repository();
     },
 
     uninstall() {
-        myuniverse().logger.debug('** schema uninstall()');
+        universe.logger.debug('** schema uninstall()');
         // delete tservices().;
     },
 
     resolve() {
-        myuniverse().logger.debug('** schema resolve()');
+        universe.logger.debug('** schema resolve()');
         // nothing to do
     },
 
     start() {
-        myuniverse().logger.debug('** schema start()');
+        universe.logger.debug('** schema start()');
         tservices().schema.init();
     },
 
     stop() {
-        myuniverse().logger.debug('** schema stop()');
+        universe.logger.debug('** schema stop()');
         tservices().schema.exit();
     },
 
     update() {
-        myuniverse().logger.debug('** schema update()');
+        universe.logger.debug('** schema update()');
     }
 };
